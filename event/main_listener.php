@@ -2,9 +2,6 @@
 
 namespace clausi\recruitment\event;
 
-/**
-* @ignore
-*/
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -22,18 +19,10 @@ class main_listener implements EventSubscriberInterface
 		);
 	}
 
-	/* @var \phpbb\controller\helper */
 	protected $helper;
-
-	/* @var \phpbb\template\template */
 	protected $template;
 
-	/**
-	* Constructor
-	*
-	* @param \phpbb\controller\helper	$helper		Controller helper object
-	* @param \phpbb\template			$template	Template object
-	*/
+
 	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template)
 	{
 		$this->helper = $helper;
